@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      playFair: ['Playfair Display', 'serif'],
+      workSans: [ 'Work Sans', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        'green': '#23BE0A',
+        'sky': '#59C6D2',
+        'dark' : {
+          DEFAULT: '#131313',
+          800: '#131313CC'
+        }
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
