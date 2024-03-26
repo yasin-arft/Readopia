@@ -8,7 +8,6 @@ const BookDetails = () => {
   const { bookId } = useParams();
   const book = books.find(item => item.bookId == bookId);
   const { image, bookName, tags, category, author, rating, totalPages, publisher, yearOfPublishing, review } = book;
-  console.log(book);
 
   return (
     <>
@@ -52,7 +51,7 @@ const BookDetails = () => {
               </tbody>
             </table>
             <div className='flex gap-4 mt-8'>
-              <button className="btn">Read</button>
+              <button className="btn border border-[#1313134D]">Read</button>
               <button className="btn bg-sky text-white">Wishlist</button>
             </div>
           </div>
