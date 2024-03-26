@@ -1,7 +1,9 @@
-import PropTypes from 'prop-types';
 import BookCard from '../BookCard/BookCard';
+import { useContext } from 'react';
+import { BookContext } from '../../Layouts/Root';
 
-const Books = ({books}) => {
+const Books = () => {
+  const books = useContext(BookContext);
 
   return (
     <section className="my-10 md:my-16 lg:my-20 xl:my-24">
@@ -13,10 +15,6 @@ const Books = ({books}) => {
       </div>
     </section>
   );
-};
-
-Books.propTypes = {
-  books: PropTypes.array
 };
 
 export default Books;

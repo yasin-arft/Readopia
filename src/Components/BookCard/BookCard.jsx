@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import { CiStar } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 
 const BookCard = ({ book }) => {
-  const { bookName, image, author, tags, category, rating } = book;
+  const { bookId, bookName, image, author, tags, category, rating } = book;
+  const navigate = useNavigate();
 
   return (
     <>
-      <div className="card p-6 rounded-2xl border border-[#13131326]">
+      <div onClick={() => navigate(`/book_details/${bookId}`)} className="card p-6 rounded-2xl border border-[#13131326] cursor-pointer">
         <figure className='max-h-56'>
           <img src={`${image}`} alt={`${bookName} cover image`} className='h-52' />
         </figure>

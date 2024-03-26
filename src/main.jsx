@@ -7,12 +7,14 @@ import Root from './Layouts/Root.jsx';
 import Home from './Components/Home/Home.jsx';
 import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './Components/PagesToRead/PagesToRead.jsx';
+import BookDetails from './Components/BookDetails/BookDetails.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root/>,
+    loader: () => fetch('./fakeData.json'),
     children: [
       {
         path: '/',
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/pages_to_read',
         element: <PagesToRead/>
+      },
+      {
+        path: '/book_details/:bookId',
+        element: <BookDetails/>
       }
     ]
   }
