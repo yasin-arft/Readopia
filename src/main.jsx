@@ -4,12 +4,29 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Layouts/Root.jsx';
+import Home from './Components/Home/Home.jsx';
+import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
+import PagesToRead from './Components/PagesToRead/PagesToRead.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root/>,
+    children: [
+      {
+        path: '/',
+        element: <Home/>
+      },
+      {
+        path: '/listed_books',
+        element: <ListedBooks/>
+      },
+      {
+        path: '/pages_to_read',
+        element: <PagesToRead/>
+      }
+    ]
   }
 ]);
 
