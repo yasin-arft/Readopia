@@ -1,4 +1,8 @@
+import { useLoaderData } from "react-router-dom";
+import Books from "../Books/Books";
+
 const Home = () => {
+  const books = useLoaderData();
   return (
     <main>
       <section className="py-8 md:py-12 lg:py-16 xl:py-20 px-10 md:px-14 lg:px-24 xl:px-28">
@@ -12,6 +16,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Books books={books}/>
     </main>
   );
 };
