@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ListedBooksCardContainer from '../ListedBooksCardContainer/ListedBooksCardContainer';
 
 const ListedBookTabs = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -12,8 +13,12 @@ const ListedBookTabs = () => {
           <Tab>Read Books</Tab>
           <Tab>Wishlist Books</Tab>
         </TabList>
-        <TabPanel>Read Books</TabPanel>
-        <TabPanel>Wishlist Books</TabPanel>
+        <TabPanel>
+          <ListedBooksCardContainer LsKey={'read-books'}/>
+        </TabPanel>
+        <TabPanel>
+          <ListedBooksCardContainer LsKey={'wishlist-books'}/>
+        </TabPanel>
       </Tabs>
     </div>
   );

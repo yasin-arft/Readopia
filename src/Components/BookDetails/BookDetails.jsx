@@ -10,10 +10,10 @@ const BookDetails = () => {
   const { image, bookName, tags, category, author, rating, totalPages, publisher, yearOfPublishing, review } = book;
 
   const handleReadBtn = () => {
-    setToLs('read-books',bookId);
+    setToLs('read-books', Number(bookId));
   }
   const handleWishlistBtn = () => {
-    setToLs('wishlist-books',bookId);
+    setToLs('wishlist-books', Number(bookId));
   }
 
   return (
