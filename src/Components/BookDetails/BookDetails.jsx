@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { BookContext } from '../../Layouts/Root';
 import { useParams } from 'react-router-dom';
@@ -9,9 +8,16 @@ const BookDetails = () => {
   const book = books.find(item => item.bookId == bookId);
   const { image, bookName, tags, category, author, rating, totalPages, publisher, yearOfPublishing, review } = book;
 
+  const handleReadBtn = () => {
+    console.log(bookId);
+  }
+  const handleWishlistBtn = () => {
+    console.log(bookId);
+  }
+
   return (
     <>
-      <div className="hero">
+      <div className="hero mb-12">
         <div className="hero-content flex-col lg:flex-row gap-12">
           <figure className="rounded-2xl flex-1 overflow-hidden flex items-center justify-center" >
             <img src={`${image}`} className='max-w-[420px]' />
@@ -51,18 +57,14 @@ const BookDetails = () => {
               </tbody>
             </table>
             <div className='flex gap-4 mt-8'>
-              <button className="btn border border-[#1313134D]">Read</button>
-              <button className="btn bg-sky text-white">Wishlist</button>
+              <button onClick={handleReadBtn} className="btn border border-[#1313134D]">Read</button>
+              <button onClick={handleWishlistBtn} className="btn bg-sky text-white">Wishlist</button>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-};
-
-BookDetails.propTypes = {
-  props: PropTypes.object
 };
 
 export default BookDetails;

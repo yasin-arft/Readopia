@@ -1,6 +1,8 @@
 import { IoIosArrowDown } from "react-icons/io";
+import ListedBookTabs from "../ListedBookTabs/ListedBookTabs";
 
 const ListedBooks = () => {
+  
   return (
     <div>
       <h2 className="text-4xl text-center font-bold font-playFair my-6 lg:mb-10">Books</h2>
@@ -17,6 +19,7 @@ const ListedBooks = () => {
           </ul>
         </div>
       </div>
+      <ListedBookTabs/>
     </div>
   );
 };
