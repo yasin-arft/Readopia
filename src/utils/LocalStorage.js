@@ -12,4 +12,8 @@ const setToLs = (key, newData) => {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
-export {getFromLS, setToLs}
+const replaceToLs = (key, newData) => {
+  localStorage.setItem(key, JSON.stringify(newData));
+}
+
+export {getFromLS, setToLs, replaceToLs}

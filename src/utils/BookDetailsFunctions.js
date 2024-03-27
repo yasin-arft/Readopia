@@ -6,8 +6,7 @@ const handleListBtn = (listKey, listName, bookId) => {
   const isExists = storedItem.find(item => item == bookId);
 
   if (isExists) {
-    toast('Already in the list');
-    return
+    toast('Already added');
   } else {
     setToLs(listKey, Number(bookId));
     toast(`Added to the ${listName}`);

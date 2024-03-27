@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { BookContext } from '../../Layouts/Root';
 import { useParams } from 'react-router-dom';
-import { getFromLS, setToLs } from '../../utils/LocalStorage';
+import { getFromLS, replaceToLs } from '../../utils/LocalStorage';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { handleListBtn } from '../../utils/BookDetailsFunctions';
@@ -12,6 +12,22 @@ const BookDetails = () => {
   const book = books.find(item => item.bookId == bookId);
   const { image, bookName, tags, category, author, rating, totalPages, publisher, yearOfPublishing, review } = book;
 
+  const handleRead = () => {
+    const storedItem = getFromLS('wishlist-books');
+    const newItem = storedItem.filter(item => item != bookId);
+    replaceToLs('wishlist-books', newItem);
+    handleListBtn('read-books', 'read list', bookId);
+  };
+
+  const handleWishlist = () => {
+    const storedItem = getFromLS('read-books');
+    const isExists = storedItem.find(item => item == bookId);
+    if (isExists) {
+      toast('Already Read');
+    } else {
+      handleListBtn('wishlist-books', 'wishlist', bookId);
+    }
+  };
 
   return (
     <>
@@ -56,8 +72,8 @@ const BookDetails = () => {
               </tbody>
             </table>
             <div className='flex gap-4 mt-8'>
-              <button onClick={() => handleListBtn('read-books', 'read list', bookId)} className="btn border border-[#1313134D]">Read</button>
-              <button onClick={() => handleListBtn('wishlist-books', 'wishlist', bookId)} className="btn bg-sky text-white">Wishlist</button>
+              <button onClick={handleRead} className="btn border border-[#1313134D]">Read</button>
+              <button onClick={handleWishlist} className="btn bg-sky text-white">Wishlist</button>
             </div>
           </div>
         </div>
