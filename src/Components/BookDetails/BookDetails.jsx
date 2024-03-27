@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { BookContext } from '../../Layouts/Root';
 import { useParams } from 'react-router-dom';
+import { setToLs } from '../../utils/LocalStorage';
 
 const BookDetails = () => {
   const books = useContext(BookContext);
@@ -9,10 +10,10 @@ const BookDetails = () => {
   const { image, bookName, tags, category, author, rating, totalPages, publisher, yearOfPublishing, review } = book;
 
   const handleReadBtn = () => {
-    console.log(bookId);
+    setToLs('read-books',bookId);
   }
   const handleWishlistBtn = () => {
-    console.log(bookId);
+    setToLs('wishlist-books',bookId);
   }
 
   return (
