@@ -18,10 +18,8 @@ const ListedBooksCardContainer = ({ LsKey }) => {
     return books.find(book => book.bookId === id);
   });
 
-  console.log(readBooks);
-
   return (
-    <div>
+    <div className='space-y-6'>
       {
         readBooks.map(item => <ListedBooksCard key={item.bookId} book={item}/>)
       }

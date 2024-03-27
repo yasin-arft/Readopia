@@ -20,8 +20,8 @@ const BookDetails = () => {
     <>
       <div className="hero mb-12">
         <div className="hero-content flex-col lg:flex-row gap-12">
-          <figure className="rounded-2xl flex-1 overflow-hidden flex items-center justify-center" >
-            <img src={`${image}`} className='max-w-[420px]' />
+          <figure className="rounded-2xl flex-1 overflow-hidden p-14" >
+            <img src={`${image}`} className='w-full h-full mx-auto' />
           </figure>
           <div className='flex-1'>
             <h2 className='text-4xl font-playFair font-bold my-5'>{bookName}</h2>
@@ -33,7 +33,7 @@ const BookDetails = () => {
             <div className='flex gap-3'>
               <span className='font-bold text-dark'>Tag</span>
               {
-                tags.map((tag, idx) => <span key={idx} className='px-4 text-green font-medium bg-[#23BE0A0D]'>{tag}</span>)
+                tags.map((tag, idx) => <span key={idx} className='px-4 text-green font-medium bg-[#23BE0A0D]'>#{tag}</span>)
               }
             </div>
             <hr className='text-dark my-4' />
