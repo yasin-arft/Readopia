@@ -33,16 +33,16 @@ const BookDetails = () => {
     <>
       <ToastContainer />
       <div className="hero mb-12">
-        <div className="hero-content flex-col lg:flex-row gap-12">
-          <figure className="rounded-2xl flex-1 overflow-hidden p-14" >
+        <div className="hero-content flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+          <figure className="rounded-2xl flex-1 overflow-hidden p-4 md:p-8 lg:p-10 xl:p-14" >
             <img src={`${image}`} className='w-full h-full mx-auto' />
           </figure>
           <div className='flex-1'>
-            <h2 className='text-4xl font-playFair font-bold my-5'>{bookName}</h2>
+            <h2 className='text-4xl font-playFair font-bold my-2 md:my-3 lg:my-5'>{bookName}</h2>
             <p className='font-medium text-lg text-dark-800'>By : {author} </p>
-            <hr className='text-dark my-4' />
+            <hr className='text-dark my-2 md:my-4' />
             <p className='font-medium text-lg text-dark-800'>{category}</p>
-            <hr className='text-dark my-4' />
+            <hr className='text-dark my-2 md:my-4' />
             <p className='mb-12'><span className='font-bold text-dark'> Review : </span>{review}</p>
             <div className='flex gap-3'>
               <span className='font-bold text-dark'>Tag</span>
@@ -50,7 +50,7 @@ const BookDetails = () => {
                 tags.map((tag, idx) => <span key={idx} className='px-4 text-green font-medium bg-[#23BE0A0D]'>#{tag}</span>)
               }
             </div>
-            <hr className='text-dark my-4' />
+            <hr className='text-dark my-2 md:my-4' />
             <table className='w-2/3 border-separate border-spacing-3'>
               <tbody>
                 <tr>
