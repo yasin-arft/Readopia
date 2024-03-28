@@ -9,6 +9,7 @@ import PagesToRead from './Components/PagesToRead/PagesToRead.jsx';
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import About from './Components/About/About.jsx';
+import Contact from './Components/Contact/Contact.jsx';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       }
     ]
   }

@@ -6,13 +6,14 @@ const Header = () => {
     { text: 'Listed Books', route: '/listed_books' },
     { text: 'Pages to Read', route: '/pages_to_read' },
     { text: 'About', route: '/about' },
+    { text: 'Contact', route: '/contact' }
   ];
 
   return (
     <header>
       <nav>
         <div className="navbar">
-          <div className="navbar-start">
+          <div className="navbar-start flex-1">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -26,7 +27,7 @@ const Header = () => {
             <a className="btn btn-ghost text-xl md:text-2xl font-bold">Readopia</a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="nav-list menu menu-horizontal px-1 gap-4 text-lg text-dark-800">
+            <ul className="nav-list menu menu-horizontal px-1 gap-2 xl:gap-4 text-lg text-dark-800">
               {
                 navItems.map((item, idx) => <NavListItems key={idx} item={item} />)
               }
@@ -42,4 +43,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header

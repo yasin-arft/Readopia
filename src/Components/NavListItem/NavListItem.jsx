@@ -5,7 +5,7 @@ const NavListItems = ({ item }) => {
   const { text, route } = item;
   return (
     <>
-      <li className=""><NavLink to={route}
+      <li><NavLink to={route}
         className={({ isActive }) =>
           isActive ? "text-green font-semibold border border-green focus:text-green focus:bg-transparent" : ""
         }
