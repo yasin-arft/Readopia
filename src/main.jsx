@@ -7,29 +7,31 @@ import Home from './Components/Home/Home.jsx';
 import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './Components/PagesToRead/PagesToRead.jsx';
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root/>,
+    element: <Root />,
     loader: () => fetch('/fakeData.json'),
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: '/listed_books',
-        element: <ListedBooks/>
+        element: <ListedBooks />
       },
       {
         path: '/pages_to_read',
-        element: <PagesToRead/>
+        element: <PagesToRead />
       },
       {
         path: '/book_details/:bookId',
-        element: <BookDetails/>
+        element: <BookDetails />
       }
     ]
   }
@@ -37,6 +39,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
