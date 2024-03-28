@@ -9,14 +9,14 @@ const ListedBooksCard = ({ book }) => {
 
   return (
     <>
-      <div className="hero-content flex-col lg:flex-row gap-6 border border-[#13131326] rounded-2xl">
+      <div className="hero-content flex-col lg:flex-row gap-4 md:gap-6 border border-[#13131326] rounded-2xl">
         <figure className="rounded-2xl overflow-hidden flex items-center justify-center p-7 max-w-[230px]" >
           <img src={`${image}`} className='w-auto h-full' />
         </figure>
         <div className='flex-1'>
           <h2 className='text-2xl font-playFair font-bold mb-4'>{bookName}</h2>
           <p className='font-medium text-lg text-dark-800 mb-4'>By : {author} </p>
-          <div className='flex gap-3'>
+          <div className='flex gap-3 flex-wrap'>
             <span className='font-bold text-dark'>Tag</span>
             {
               tags.map((tag, idx) => <span key={idx} className='px-4 text-green font-medium bg-[#23BE0A0D]'>#{tag}</span>)
@@ -26,7 +26,7 @@ const ListedBooksCard = ({ book }) => {
               <span>Year of Publishing: {yearOfPublishing}</span>
             </span>
           </div>
-          <div className='flex gap-5 text-dark-600 mt-4'>
+          <div className='flex flex-col md:flex-row gap-5 text-dark-600 mt-4'>
             <p className='flex gap-3 items-center'>
               <HiOutlineUsers className='text-xl' />
               <span>Publisher: {publisher}</span>
@@ -37,9 +37,9 @@ const ListedBooksCard = ({ book }) => {
             </p>
           </div>
           <hr className='text-dark my-4' />
-          <div className='mt-8 space-x-3'>
-            <span className="bg-[#328EFF26] rounded-full px-5 py-2.5 text-[#328EFF]">Category: {category}</span>
-            <span className="bg-[#FFAC3326] rounded-full px-5 py-2.5 text-[#FFAC33]">Rating: {rating}</span>
+          <div className='flex flex-col gap-3 sm:flex-row mt-8'>
+            <span className="bg-[#328EFF26] rounded-full px-5 py-2.5 text-[#328EFF] text-center">Category: {category}</span>
+            <span className="bg-[#FFAC3326] rounded-full px-5 py-2.5 text-[#FFAC33] text-center">Rating: {rating}</span>
             <button onClick={() => navigate(`/book_details/${bookId}`)} className="btn bg-green rounded-full px-5 py-2.5 min-h-auto h-auto text-white">View Details</button>
           </div>
         </div>

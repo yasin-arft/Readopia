@@ -12,10 +12,10 @@ const ListedBooks = () => {
             Sort By
             <IoIosArrowDown className="text-xl" />
           </div>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a>Rating</a></li>
-            <li><a>Number of pages</a></li>
-            <li><a>Published year</a></li>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-dark-800 space-x-4 text-base">
+            <li><a className="inline-block text-center">Rating</a></li>
+            <li><a className="inline-block text-center">Number of pages</a></li>
+            <li><a className="inline-block text-center">Published year</a></li>
           </ul>
         </div>
       </div>

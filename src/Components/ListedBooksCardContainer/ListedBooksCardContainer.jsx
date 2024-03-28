@@ -19,7 +19,7 @@ const ListedBooksCardContainer = ({ LsKey }) => {
   });
 
   return (
-    <div className='space-y-6'>
+    <div className='space-y-4 lg:space-y-6'>
       {
         readBooks.map(item => <ListedBooksCard key={item.bookId} book={item}/>)
       }
