@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer} from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { getFromLS } from '../../utils/LocalStorage';
 import { useContext, useEffect, useState } from 'react';
 import { BookContext } from '../../Layouts/Root';
@@ -37,29 +37,31 @@ const PagesToRead = () => {
   }, [books]);
 
   return (
-    <div className='h-screen'>
-    <ResponsiveContainer>
-      <BarChart
-        width={1000}
-        height={600}
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 100,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={'name'}/>
-        <YAxis />
-        <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-        </Bar>
-      </BarChart>
-      </ResponsiveContainer>
+    <div className='max-w-full overflow-auto'>
+      <div className='h-screen min-w-[1000px]'>
+        <ResponsiveContainer>
+          <BarChart
+            width={1000}
+            height={600}
+            data={data}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 100,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey={'name'} />
+            <YAxis />
+            <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
