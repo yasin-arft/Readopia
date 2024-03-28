@@ -1,6 +1,7 @@
 [
-  {
+    {
       "bookId": 1,
+      "shortName": "Gatsby",
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "image": "https://i.ibb.co/RcZVNQV/The-Great-Gatsby.jpg",
@@ -11,9 +12,10 @@
       "tags": ["Classic", "Romance", "Tragedy"],
       "publisher": "Scribner",
       "yearOfPublishing": 1925
-  },
-  {
+    },
+    {
       "bookId": 2,
+      "shortName": "Mockingbird",
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "image": "https://i.ibb.co/0c2GrLr/To-Kill-a-Mockingbird.jpg",
@@ -24,9 +26,10 @@
       "tags": ["Classic", "Social Justice", "Coming of Age"],
       "publisher": "J. B. Lippincott & Co.",
       "yearOfPublishing": 1960
-  },
-  {
+    },
+    {
       "bookId": 3,
+      "shortName": "Catcher",
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "image": "https://i.ibb.co/sRrGffY/The-Catcher-in-the-Rye.jpg",
@@ -37,9 +40,10 @@
       "tags": ["Coming of Age", "Identity", "Alienation"],
       "publisher": "Little, Brown and Company",
       "yearOfPublishing": 1951
-  },
-  {
+    },
+    {
       "bookId": 4,
+      "shortName": "1984",
       "bookName": "1984",
       "author": "George Orwell",
       "image": "https://i.ibb.co/LgrMyS8/1984-first-edition.jpg",
@@ -50,9 +54,10 @@
       "tags": ["Dystopian", "Political", "Totalitarianism"],
       "publisher": "Secker & Warburg",
       "yearOfPublishing": 1949
-  },
-  {
+    },
+    {
       "bookId": 5,
+      "shortName": "Hobbit",
       "bookName": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "image": "https://i.ibb.co/fM6RJ7S/Hobbit-cover.jpg",
@@ -63,9 +68,10 @@
       "tags": ["Adventure", "Magic", "Quest"],
       "publisher": "Allen & Unwin",
       "yearOfPublishing": 1937
-  },
-  {
+    },
+    {
       "bookId": 6,
+      "shortName": "Pride",
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
       "image": "https://i.ibb.co/Wt2ZXRJ/Brock-Pride-and-Prejudice.jpg",
@@ -76,9 +82,10 @@
       "tags": ["Romance", "Satire", "Regency"],
       "publisher": "T. Egerton, Whitehall",
       "yearOfPublishing": 1813
-  },
-  {
+    },
+    {
       "bookId": 7,
+      "shortName": "Potter",
       "bookName": "Harry Potter and the Philosopher's Stone",
       "author": "J.K. Rowling",
       "image": "https://i.ibb.co/JkmrJj0/Harry-Potter-and-the-Philosopher-s-Stone.jpg",
@@ -89,9 +96,10 @@
       "tags": ["Magic", "Adventure", "Friendship"],
       "publisher": "Bloomsbury",
       "yearOfPublishing": 1997
-  },
-  {
+    },
+    {
       "bookId": 8,
+      "shortName": "Alchemist",
       "bookName": "The Alchemist",
       "author": "Paulo Coelho",
       "image": "https://i.ibb.co/S7pXbM6/The-Alchemist.jpg",
@@ -102,9 +110,10 @@
       "tags": ["Philosophical", "Adventure", "Quest"],
       "publisher": "HarperCollins",
       "yearOfPublishing": 1988
-  },
-  {
+    },
+    {
       "bookId": 9,
+      "shortName": "Hunger",
       "bookName": "The Hunger Games",
       "author": "Suzanne Collins",
       "image": "https://i.ibb.co/1vdY67Q/The-Hunger-Games.jpg",
@@ -115,5 +124,6 @@
       "tags": ["Dystopian", "Action", "Survival"],
       "publisher": "Scholastic Corporation",
       "yearOfPublishing": 2008
-  }
-]
+    }
+  ]
+  

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid} from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer} from 'recharts';
 import { getFromLS } from '../../utils/LocalStorage';
 import { useContext, useEffect, useState } from 'react';
 import { BookContext } from '../../Layouts/Root';
@@ -30,16 +30,15 @@ const PagesToRead = () => {
     });
 
     const newData = readBooks.map(item => {
-      const { bookName, totalPages } = item;
-      return { name: bookName, uv: totalPages }
+      const { shortName, totalPages } = item;
+      return { name: shortName, uv: totalPages }
     });
     setData(newData);
   }, [books]);
 
-
   return (
-    <>
-    {/* <ResponsiveContainer width={'100%'} height={'100%'}> */}
+    <div className='h-screen'>
+    <ResponsiveContainer>
       <BarChart
         width={1000}
         height={600}
@@ -52,7 +51,7 @@ const PagesToRead = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name"/>
+        <XAxis dataKey={'name'}/>
         <YAxis />
         <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
           {data.map((entry, index) => (
@@ -60,8 +59,8 @@ const PagesToRead = () => {
           ))}
         </Bar>
       </BarChart>
-      {/* </ResponsiveContainer> */}
-    </>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
