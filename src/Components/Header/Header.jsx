@@ -22,7 +22,7 @@ const Header = () => {
                 }
               </ul>
             </div>
-            <a className="btn btn-ghost text-2xl font-bold">Book Vibe</a>
+            <a className="btn btn-ghost text-xl md:text-2xl font-bold pl-0">Book Vibe</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="nav-list menu menu-horizontal px-1 gap-4 text-lg text-dark-800">
@@ -32,8 +32,8 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end gap-4">
-            <a className="btn bg-green text-white text-lg px-5 h-auto">Sign In</a>
-            <a className="btn bg-sky text-white text-lg px-5 h-auto">Sign Up</a>
+            <a className="btn bg-green text-white sm:text-lg px-3 sm:px-5 h-auto min-h-10 sm:min-h-12">Sign In</a>
+            <a className="btn bg-sky text-white sm:text-lg px-3 sm:px-5 h-auto min-h-10 sm:min-h-12">Sign Up</a>
           </div>
         </div>
       </nav>
